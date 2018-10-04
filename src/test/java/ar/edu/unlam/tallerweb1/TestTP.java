@@ -75,7 +75,7 @@ public class TestTP extends SpringTest {
 				.list();
 				assertThat(Resultado).hasSize(2);
 	}
-	
+	// No funciona
 	@Test
 	@Transactional
 	public void buscarPaisesAlNorteDelTropicoDeCancer() {
@@ -90,15 +90,18 @@ public class TestTP extends SpringTest {
 		
 		Pais peru = new Pais();
 		Pais canada = new Pais();
-		
-		session.save(peru);
-		session.save(canada);
-		
+				
 		Ciudad lima = new Ciudad("lima", ubicacionLima, peru);
 		Ciudad ottawa = new Ciudad("ottawa", ubicacionOttawa, canada);
 		
+		peru.setCapital(lima);
+		canada.setCapital(ottawa);
+		
 		session.save(lima);
 		session.save(ottawa);
+		
+		session.save(peru);
+		session.save(canada);
 		
 		List<Pais> Resultado = getSession().createCriteria(Pais.class)
 				.createAlias("capital", "capital")
