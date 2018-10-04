@@ -22,6 +22,19 @@ public class Pais {
 	private Continente continente;
 	
 	
+	public Pais(String nombre, Long habitantes, String idioma, Ciudad capital, Continente continente) {
+		super();
+		this.nombre = nombre;
+		this.habitantes = habitantes;
+		this.idioma = idioma;
+		this.capital = capital;
+		this.continente = continente;
+	}
+	
+	public Pais() {
+	}
+	
+	
 	public Long getId() {
 		return id;
 	}

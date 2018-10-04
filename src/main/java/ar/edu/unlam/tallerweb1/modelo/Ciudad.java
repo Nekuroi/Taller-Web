@@ -19,7 +19,12 @@ public class Ciudad {
 	@ManyToOne
 	private Pais pais;
 	
-	
+	public Ciudad(String nombre, Ubicacion ubicacionGeografica, Pais pais) {
+		super();
+		this.nombre = nombre;
+		this.ubicacionGeografica = ubicacionGeografica;
+		this.pais = pais;
+	}
 	public Long getId() {
 		return id;
 	}

@@ -14,8 +14,11 @@ public class Ubicacion {
 	private Double longitud;
 	private Double latitud;
 	
-	
-	
+	public Ubicacion(Double longitud, Double latitud) {
+		super();
+		this.longitud = longitud;
+		this.latitud = latitud;
+	}
 	public Long getId() {
 		return id;
 	}

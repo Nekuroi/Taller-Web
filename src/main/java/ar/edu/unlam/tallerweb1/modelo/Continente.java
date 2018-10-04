@@ -13,6 +13,10 @@ public class Continente {
 	private Long id;
 	private String nombre;
 	
+	public Continente(String nombre) {
+		super();
+		this.nombre = nombre;
+	}
 	
 	public Long getId() {
 		return id;
