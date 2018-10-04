@@ -1,37 +1,37 @@
 package ar.edu.unlam.tallerweb1.modelo;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
-public class Cbu {
+public class Ubicacion {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String cbu;
+	private Double longitud;
+	private Double latitud;
 	
-	@ManyToOne(cascade={CascadeType.ALL})
-	private Banco banco;
 	
-	public String getCbu() {
-		return cbu;
-	}
-	public void setCbu(String cbu) {
-		this.cbu = cbu;
-	}
+	
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
-	@Override
-	public String toString() {
-		return "\nCbu: " + id + "," + cbu + "," + banco;
+	public Double getLongitud() {
+		return longitud;
+	}
+	public void setLongitud(Double longitud) {
+		this.longitud = longitud;
+	}
+	public Double getLatitud() {
+		return latitud;
+	}
+	public void setLatitud(Double latitud) {
+		this.latitud = latitud;
 	}
 }

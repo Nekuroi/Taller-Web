@@ -12,11 +12,12 @@ import ar.edu.unlam.tallerweb1.modelo.Cbu;
 import ar.edu.unlam.tallerweb1.modelo.Cliente;
 import ar.edu.unlam.tallerweb1.modelo.Producto;
 
+@SuppressWarnings("unchecked")
 public class TestCriteria extends SpringTest {
 
-	@SuppressWarnings("unchecked")
+	
 	@Test
-	@Transactional @Rollback(true)
+	@Transactional
 	public void buscarClientePorNombre() {
 		
 		Session session = getSession();
@@ -47,7 +48,7 @@ public class TestCriteria extends SpringTest {
 	}
 	
 	@Test
-	@Transactional @Rollback(true)
+	@Transactional
 	public void buscarProductosDeUnCliente() {
 		
 		Session session = getSession();
@@ -97,7 +98,7 @@ public class TestCriteria extends SpringTest {
 	}
 	
 	@Test
-	@Transactional @Rollback(true)
+	@Transactional
 	public void buscarProductosDeClienteRocio() {
 		
 		Session session = getSession();
@@ -146,7 +147,7 @@ public class TestCriteria extends SpringTest {
 	}
 	
 	@Test
-	@Transactional @Rollback(true)
+	@Transactional
 	public void buscarProductosDeUnSexo() {
 		
 		Session session = getSession();
